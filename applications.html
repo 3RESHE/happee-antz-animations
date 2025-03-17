@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <title>HappeeAntz - Hive Hustle Hire</title>
+    <link rel="icon" type="image/x-icon" href="./images/HAPPYANTZ.PNG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: "#368fd8", foreground: "#FFFFFF" },
+                        secondary: { DEFAULT: "#FDCB58", foreground: "#000000" },
+                        accent: { DEFAULT: "#E78B00", foreground: "#FFFFFF" },
+                        "light-bg": "#F4F6F9",
+                        "dark-blue-start": "#368fd8",
+                        "ant-yellow": "#f2c94c",
+                        "ant-blue": "#3498db",
+                    },
+                    fontFamily: { sans: ["Inter", "sans-serif"] },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .boogaloo-regular {
+            font-family: "Boogaloo", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes swing {
+            0% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(-5deg); }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        .swing {
+            animation: swing 3s ease-in-out infinite;
+        }
+
+        /* Talent Card Styles */
+        .talent-card {
+            @apply bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+        }
+        .talent-card-header {
+            @apply p-6 pb-4 text-center;
+        }
+        .talent-card-body {
+            @apply px-6 py-2 flex-grow;
+        }
+        .talent-card-footer {
+            @apply px-6 py-4 border-t mt-auto;
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-foreground font-sans min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-gradient-to-r from-secondary to-yellow-500 text-dark-blue-start shadow-md">
+    <div class="container mx-auto flex h-20 items-center justify-between px-4">
+        <div class="flex items-center gap-4">
+            <button id="mobileMenuToggle" class="p-2 rounded-md hover:bg-dark-blue-start/10 md:hidden" aria-label="Toggle menu">
+                <i class="fas fa-bars text-xl text-dark-blue-start"></i>
+            </button>
+            <a href="./talent.html" class="flex items-center gap-3">
+                <img src="./HAPPYANTZ.PNG" alt="HappeeAntz Logo" class="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110">
+                <span class="text-xl md:text-2xl font-bold tracking-tight boogaloo-regular">
+                    <span class="text-primary">HAPPEE</span><span class="text-accent">ANTZ</span>
+                </span>
+            </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-4">
+            <a href="./talent.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Home</a>
+            <a href="./hivewisepricing.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Hive Wise Pricing Plans</a>
+            <a href="./companies.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-credible jobs</a>
+            <a href="./applications.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-mazing talents</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+            <a href="" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">LOGIN</a>
+            <a href="" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">REGISTER</a>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-yellow-500 border-t border-dark-blue-start/10 px-4 py-6 shadow-lg">
+        <nav class="flex flex-col gap-3">
+            <a href="./talent.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Dashboard</a>
+            <a href="./hivewisepricing.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Browse Jobs</a>
+            <a href="./companies.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Companies</a>
+            <a href="./applications.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Applications</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300">Login</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">Register</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .nav-link.active {
+        background-color: #ffffff; /* White background for active link */
+        color: #1e3a8a; /* Dark blue text */
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #mobileMenu .nav-link.active {
+        background-color: #1e3a8a; /* Dark blue for mobile active */
+        color: #ffffff; /* White text */
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    // Add this script at the bottom of your HTML file or in a separate JS file
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href').split('/').pop();
+            if (href === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="w-full py-12 md:py-24 lg:py-10 bg-[#368fd8] text-white relative overflow-hidden">
+            <div class="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 gap-8">
+                <div class="flex-shrink-0 order-1 lg:order-2 animate-on-scroll swing" data-animation="slide-in-right">
+                    <img src="./HAPPYANTZ2.png" alt="Happee Antz Character" class="h-64 sm:h-80 md:h-96 lg:h-[500px] w-auto transition-transform duration-300 hover:scale-105 mx-auto">
+                </div>
+                <div class="text-center max-w-2xl order-2 lg:order-1 animate-on-scroll" data-animation="fade-in-up">
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold boogaloo-regular tracking-tight text-white">HAPPEE ANTZ</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-white-200">
+                        Where <span class="boogaloo-regular">Ant-mazing</span> Talents meet <span class="boogaloo-regular">Ant-credible</span> Employers worldwide!
+                    </p>
+                    <div class="mb-3 animate-on-scroll" data-animation="fade-in-up">
+                        <p class="text-base sm:text-lg md:text-2xl font-semibold">JOIN THE COLONY FOR FREE!</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-6 justify-center animate-on-scroll" data-animation="fade-in-up">
+                        <button class="border-2 border-ant-yellow text-ant-yellow hover:bg-ant-yellow hover:text-ant-blue px-6 py-3 rounded-md font-bold transition-colors">I'm a Happee Talent</button>
+                        <button class="border-2 border-ant-yellow text-ant-yellow hover:bg-ant-yellow hover:text-ant-blue px-6 py-3 rounded-md font-bold transition-colors">I'm a Happee Employer</button>
+                    </div>
+                    <h2 class="mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold boogaloo-regular tracking-tight text-white animate-on-scroll" data-animation="fade-in-up">HIVE, HUSTLE. HIRE!</h2>
+                    <p class="text-sm sm:text-md md:text-lg text-white-300 animate-on-scroll" data-animation="fade-in-up">
+                        Join thousands of professional workers who’ve marched their way to success with Happee Antz!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talent Section -->
+        <section id="talents" class="w-full py-12 md:py-24 bg-light-bg">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll" data-animation="fade-in-up">
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter text-primary boogaloo-regular">ANT-CREDIBLE TALENTS</h2>
+                    <p class="text-gray-500 text-sm md:text-xl max-w-[700px]">Discover skilled professionals ready to join your colony</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <div class="talent-card animate-on-scroll" data-animation="slide-in-left">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Alex Johnson</h3>
+                                    <p class="text-sm text-gray-500">Full Stack Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="talent-card-body">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">React</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Node.js</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">TypeScript</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">MongoDB</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">5 years of experience building scalable web applications.</p>
+                            </div>
+                        </div>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="talent-card animate-on-scroll" data-animation="fade-in-up">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Sarah Miller</h3>
+                                    <p class="text-sm text-gray-500">UX/UI Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="talent-card-body">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Figma</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Adobe XD</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Sketch</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">UI Design</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">7 years creating beautiful user experiences.</p>
+                            </div>
+                        </div>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="talent-card animate-on-scroll" data-animation="fade-in-up">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
+                                <div>
+                                    <h3 class="text-lg font-semibold">David Chen</h3>
+                                    <p class="text-sm text-gray-500">Data Scientist</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="talent-card-body">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Python</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">TensorFlow</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">SQL</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Machine Learning</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">4 years of experience in data analysis.</p>
+                            </div>
+                        </div>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="talent-card animate-on-scroll" data-animation="slide-in-right">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Emily Rodriguez</h3>
+                                    <p class="text-sm text-gray-500">Project Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="talent-card-body">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Agile</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Scrum</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">JIRA</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Leadership</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">8 years managing successful tech projects.</p>
+                            </div>
+                        </div>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8 animate-on-scroll" data-animation="fade-in-up">
+                    <button class="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary/10 transition-all duration-300">View All Talents</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 bg-dark-blue-start text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Our Story</a></li>
+                        <li><a href="#" class="hover:underline">Team</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">For Employers</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Post a Job</a></li>
+                        <li><a href="#" class="hover:underline">Pricing</a></li>
+                        <li><a href="#" class="hover:underline">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">For Talent</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Find Jobs</a></li>
+                        <li><a href="#" class="hover:underline">Career Advice</a></li>
+                        <li><a href="#" class="hover:underline">Profile Tips</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Support</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-dark-blue-end/50">
+                <div class="flex items-center gap-2 mb-4 sm:mb-0">
+                    <img src="./images/HAPPYANTZ.PNG" alt="Logo" class="h-8 w-8 rounded-full">
+                    <span class="text-xl font-bold"><span class="text-white">HAPPEE</span><span class="text-secondary">ANTZ</span></span>
+                </div>
+                <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> AntWorks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenuToggle.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+            document.addEventListener("click", function (event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+
+            // Intersection Observer for Scroll Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        const animation = entry.target.getAttribute("data-animation");
+                        if (animation) {
+                            entry.target.classList.add(animation);
+                        }
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            // Apply observer to all elements with animate-on-scroll class
+            document.querySelectorAll(".animate-on-scroll").forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+</html>

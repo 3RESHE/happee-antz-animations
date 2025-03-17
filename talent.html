@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <title>HappeeAntz - Hive Hustle Hire</title>
+    <link rel="icon" type="image/x-icon" href="./images/HAPPYANTZ.PNG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: "#368fd8", foreground: "#FFFFFF" },
+                        secondary: { DEFAULT: "#FDCB58", foreground: "#000000" },
+                        accent: { DEFAULT: "#E78B00", foreground: "#FFFFFF" },
+                        "light-bg": "#F4F6F9",
+                        "dark-blue-start": "#368fd8",
+                        "ant-yellow": "#f2c94c",
+                        "ant-blue": "#3498db",
+                    },
+                    fontFamily: { sans: ["Inter", "sans-serif"] },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .boogaloo-regular {
+            font-family: "Boogaloo", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        @keyframes swing {
+            0% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(-5deg); }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        .swing {
+            animation: swing 3s ease-in-out infinite;
+        }
+
+        /* Wave Divider */
+        .wave-divider {
+            position: relative;
+            height: 70px;
+            overflow: hidden;
+        }
+        .wave-divider::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23f2c94c' opacity='.25'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' fill='%23f2c94c' opacity='.5'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23f2c94c'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-foreground font-sans min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-gradient-to-r from-secondary to-yellow-500 text-dark-blue-start shadow-md">
+    <div class="container mx-auto flex h-20 items-center justify-between px-4">
+        <div class="flex items-center gap-4">
+            <button id="mobileMenuToggle" class="p-2 rounded-md hover:bg-dark-blue-start/10 md:hidden" aria-label="Toggle menu">
+                <i class="fas fa-bars text-xl text-dark-blue-start"></i>
+            </button>
+            <a href="./talent.html" class="flex items-center gap-3">
+                <img src="./HAPPYANTZ.PNG" alt="HappeeAntz Logo" class="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110">
+                <span class="text-xl md:text-2xl font-bold tracking-tight boogaloo-regular">
+                    <span class="text-primary">HAPPEE</span><span class="text-accent">ANTZ</span>
+                </span>
+            </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-4">
+            <a href="./talent.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Home</a>
+            <a href="./hivewisepricing.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Hive Wise Pricing Plans</a>
+            <a href="./companies.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-credible jobs</a>
+            <a href="./applications.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-mazing talents</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+            <a href="" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">LOGIN</a>
+            <a href="" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">REGISTER</a>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-yellow-500 border-t border-dark-blue-start/10 px-4 py-6 shadow-lg">
+        <nav class="flex flex-col gap-3">
+            <a href="./talent.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Dashboard</a>
+            <a href="./hivewisepricing.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Browse Jobs</a>
+            <a href="./companies.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Companies</a>
+            <a href="./applications.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Applications</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300">Login</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">Register</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .nav-link.active {
+        background-color: #ffffff; /* White background for active link */
+        color: #1e3a8a; /* Dark blue text */
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #mobileMenu .nav-link.active {
+        background-color: #1e3a8a; /* Dark blue for mobile active */
+        color: #ffffff; /* White text */
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    // Add this script at the bottom of your HTML file or in a separate JS file
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href').split('/').pop();
+            if (href === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="w-full py-12 md:py-24 lg:py-10 bg-[#368fd8] text-white relative overflow-hidden">
+            <div class="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 gap-8">
+                <div class="flex-shrink-0 order-1 lg:order-2 animate-on-scroll swing" data-animation="slide-in-right">
+                    <img src="./HAPPYANTZ2.png" alt="Happee Antz Character" class="h-64 sm:h-80 md:h-96 lg:h-[500px] w-auto transition-transform duration-300 hover:scale-105 mx-auto">
+                </div>
+                <div class="text-center max-w-2xl order-2 lg:order-1 animate-on-scroll" data-animation="fade-in-up">
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold boogaloo-regular tracking-tight text-white">HAPPEE ANTZ</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-white-200">
+                        Where <span class="boogaloo-regular">Ant-mazing</span> Talents meet <span class="boogaloo-regular">Ant-credible</span> Employers worldwide!
+                    </p>
+                    <div class="mb-3">
+                        <p class="text-base sm:text-lg md:text-2xl font-semibold">JOIN THE COLONY FOR FREE!</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-6 justify-center">
+                        <button class="border-2 border-ant-yellow text-ant-yellow hover:bg-ant-yellow hover:text-ant-blue px-6 py-3 rounded-md font-bold transition-colors">I'm a Happee Talent</button>
+                        <button class="border-2 border-ant-yellow text-ant-yellow hover:bg-ant-yellow hover:text-ant-blue px-6 py-3 rounded-md font-bold transition-colors">I'm a Happee Employer</button>
+                    </div>
+                    <h2 class="mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold boogaloo-regular tracking-tight text-white">HIVE, HUSTLE. HIRE!</h2>
+                    <p class="text-sm sm:text-md md:text-lg text-white-300">
+                        Join thousands of professional workers who’ve marched their way to success with Happee Antz!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Employer Intro) -->
+        <footer class="bg-ant-yellow py-6">
+            <div class="container mx-auto justify-start">
+                <h2 class="text-3xl md:text-2xl text-white font-bold animate-on-scroll" data-animation="fade-in-up">HUNT. HIRE. BUILD YOUR HAPPEE DREAM TEAM!</h2>
+            </div>
+        </footer>
+
+        <!-- How It Works - Employer Section -->
+        <section class="bg-white py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] relative animate-on-scroll" data-animation="slide-in-left">
+                        <div class="w-32 h-32 rounded-full bg-ant-blue flex items-center justify-center mb-4 shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">1. Sign Up & Create Your Company Account</h3>
+                    </div>
+                    
+                    <!-- Arrow (Hidden on mobile, shown on md+) -->
+                    <div class="hidden md:block w-8 h-8 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] relative animate-on-scroll" data-animation="fade-in-up">
+                        <div class="w-32 h-32 rounded-full bg-ant-blue flex items-center justify-center mb-4 shadow-lg">
+                            <div class="text-white text-center">
+                                <div class="text-sm font-bold">NOW</div>
+                                <div class="text-lg font-bold">HIRING</div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">2. Post and share your job openings to thousands of Happee Job Seekers</h3>
+                    </div>
+                    
+                    <!-- Arrow (Hidden on mobile, shown on md+) -->
+                    <div class="hidden md:block w-8 h-8 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] relative animate-on-scroll" data-animation="fade-in-up">
+                        <div class="w-32 h-32 rounded-full bg-ant-blue flex items-center justify-center mb-4 shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">3. Discover and Connect with the Best Talents in the Filipino Community and Beyond.</h3>
+                    </div>
+                    
+                    <!-- Arrow (Hidden on mobile, shown on md+) -->
+                    <div class="hidden md:block w-8 h-8 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] relative animate-on-scroll" data-animation="slide-in-right">
+                        <div class="w-32 h-32 rounded-full bg-indigo-600 flex items-center justify-center mb-4 shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">4. Hire without limits with guaranteed verified skills and pure talents!</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Job Seeker Intro) -->
+        <footer class="bg-primary py-6">
+            <div class="container mx-auto justify-start">
+                <h2 class="text-3xl md:text-2xl text-white font-bold animate-on-scroll" data-animation="fade-in-up">JOB HUNTING JUST GOT EASIER! HOW IT WORKS?</h2>
+            </div>
+        </footer>
+
+        <!-- How It Works - Job Seeker Section -->
+        <section class="bg-white py-12 md:py-16 text-black">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-center items-start gap-4 md:gap-8">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] animate-on-scroll" data-animation="slide-in-left">
+                        <div class="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center mb-4 shadow-lg">
+                            <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-ant-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">1. Sign Up & Create Your Account</h3>
+                        <p class="text-sm">Sign up and create your job seeker account to explore exciting opportunities, connect with top employers, and take the next step in your career—stress-free and scam-free!</p>
+                    </div>
+                    
+                    <!-- Vertical Arrow (Shown on mobile, hidden on md+) -->
+                    <div class="flex justify-center md:hidden w-full h-8 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <!-- Horizontal Arrow (Hidden on mobile, shown on md+) -->
+                    <div class="hidden md:block w-8 h-8 mt-16 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] animate-on-scroll" data-animation="fade-in-up">
+                        <div class="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center mb-4 shadow-lg">
+                            <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-ant-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">2. Build & Optimize your CV</h3>
+                        <p class="text-sm">Your CV is your ticket to better opportunities! Craft a professional, eye-catching resume that highlights your skills, experience, and strengths to attract top employers. Make every application count, build, refine, and get noticed with Happee Antz!</p>
+                    </div>
+                    
+                    <!-- Vertical Arrow (Shown on mobile, hidden on md+) -->
+                    <div class="flex justify-center md:hidden w-full h-8 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <!-- Horizontal Arrow (Hidden on mobile, shown on md+) -->
+                    <div class="hidden md:block w-8 h-8 mt-16 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] animate-on-scroll" data-animation="fade-in-up">
+                        <div class="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center mb-4 shadow-lg">
+                            <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                                <div class="text-ant-blue font-bold text-xl">SUBMIT</div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">3. Submit Your Application & Explore Endless Opportunities!</h3>
+                        <p class="text-sm">With thousands of jobs waiting, your next big career move is just a click away! Apply with confidence, connect with top employers, and take the next step toward success!</p>
+                    </div>
+                    
+                    <!-- Vertical Arrow (Shown on mobile, hidden on md+) -->
+                    <div class="flex justify-center md:hidden w-full h-8 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <!-- Horizontal Arrow (Hidden on mobile, shown on md+) -->
+                    <div class="hidden md:block w-8 h-8 mt-16 animate-on-scroll" data-animation="fade-in-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-center text-center min-w-[200px] animate-on-scroll" data-animation="slide-in-right">
+                        <div class="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center mb-4 shadow-lg">
+                            <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center">
+                                <div class="text-ant-blue font-bold text-xl">GET HIRED</div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">4. Get Hired Directly by Verified Employers</h3>
+                        <p class="text-sm">At Happee Antz, we make job searching simple, secure, and stress-free! No middlemen, no hidden fees—just direct connections with verified employers who are ready to hire. Whether you're looking for remote work, onsite opportunities, or freelance gigs, we've got thousands of jobs waiting for you. Get hired with confidence!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="bg-gray-100 py-12 md:py-16 relative">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 animate-on-scroll" data-animation="fade-in-up">ABOUT US</h2>
+                <div class="max-w-4xl mx-auto text-gray-700 space-y-6 animate-on-scroll" data-animation="fade-in-up">
+                    <p>With 20+ years in BPO, 10+ years in RPO, and 5+ years in virtual assistance, we created Happee Antz to connect talent with employers in a reliable, scam-free platform.</p>
+                    <p>Established in September 2024, we’re a Filipino-built job marketplace making hiring and job hunting happier and stress-free for everyone.</p>
+                </div>
+                <div class="text-center mt-12 animate-on-scroll" data-animation="slide-in-right">
+                    <h3 class="text-3xl font-bold text-ant-blue boogaloo-regular mb-8">Your Happiest Future starts here!</h3>
+                    <button class="bg-ant-yellow hover:bg-yellow-500 text-gray-800 font-bold py-3 px-8 rounded-md shadow-lg transition-colors">SIGN UP FOR FREE NOW! →</button>
+                </div>
+                <br>
+            </div>
+            <div class="wave-divider absolute bottom-0 left-0 w-full"></div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-white py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 animate-on-scroll" data-animation="fade-in-up">CLIENT TESTIMONIALS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="slide-in-left">
+                        <p class="text-gray-700 italic mb-6">"Finding the right talent in the BPO industry has always been a challenge, but Happee Antz has completely changed the game. Their platform connects us with highly skilled, pre-screened, and job-ready candidates, saving us valuable time by eliminating the need to sift through unqualified applicants. Every hire we've made through Happee Antz has been professional, reliable, and fully prepared to perform from day one.</p>
+                        <p class="text-gray-700 italic mb-6">What makes Happee Antz stand out are their streamlined hiring process and dedicated support. With their advanced applicant tracking system, verified talent pool, and seamless recruitment flow, we've been able to fill roles faster, shorten hiring cycles, and confidently scale our operations.</p>
+                        <p class="text-gray-700 italic mb-6">If you're a BPO company looking to build a high-performing team, I highly recommend Happee Antz. Their commitment to quality hiring, efficiency, and employer satisfaction is second to none. See the difference for yourself—start hiring with Happee Antz today!"</p>
+                        <div class="flex flex-col">
+                            <span class="font-semibold">Ms. Danie, CEO OSREM BPO</span>
+                            <span class="text-gray-600">Philippines</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in-up">
+                        <p class="text-gray-700 italic mb-6">"Hiring the right people is crucial in the fast-paced world of digital marketing, and Happee Antz has exceeded our expectations. Every employee we've hired through their verified applicants has been skilled, reliable, and a perfect fit for our team. Unlike other job platforms where we've encountered unqualified or mismatched candidates, Happee Antz has consistently provided us with top-tier talents who are ready to work.</p>
+                        <p class="text-gray-700 italic mb-6">Since shifting our hiring efforts to Happee Antz, we've streamlined our recruitment process and found zero issues with the professionals we've brought on board. Their commitment to quality, security, and seamless hiring makes them our go-to job marketplace over other marketplaces. If you're looking for digital marketing experts without the usual hiring headaches, Happee Antz is the best place to find them!"</p>
+                        <div class="flex flex-col">
+                            <span class="font-semibold">Anthony L, CEO DIGREV</span>
+                            <span class="text-gray-600">Sydney, Australia</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="slide-in-right">
+                        <p class="text-gray-700 italic mb-6">"As a new restaurant owner, finding skilled and trustworthy staff was one of my biggest challenges—until I discovered Happee Antz. Through their verified applicants, I was able to hire experienced chefs, efficient servers, and reliable kitchen staff without any hassle.</p>
+                        <p class="text-gray-700 italic mb-6">Every employee we've brought on board from Happee Antz has been professional, hardworking, and a great fit for our team. Happee Antz made the process fast and smooth.</p>
+                        <p class="text-gray-700 italic mb-6">Thanks to them, I can now focus on growing my restaurant instead of worrying about hiring. I highly recommend Happee Antz to any business looking for quality talent without the usual hiring struggles."</p>
+                        <div class="flex flex-col">
+                            <span class="font-semibold">Cynthia M, OWNER/KUIZINE</span>
+                            <span class="text-gray-600">Philippines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 bg-dark-blue-start text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Our Story</a></li>
+                        <li><a href="#" class="hover:underline">Team</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">For Employers</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Post a Job</a></li>
+                        <li><a href="#" class="hover:underline">Pricing</a></li>
+                        <li><a href="#" class="hover:underline">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">For Talent</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Find Jobs</a></li>
+                        <li><a href="#" class="hover:underline">Career Advice</a></li>
+                        <li><a href="#" class="hover:underline">Profile Tips</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Support</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-dark-blue-end/50">
+                <div class="flex items-center gap-2 mb-4 sm:mb-0">
+                    <img src="./images/HAPPYANTZ.PNG" alt="Logo" class="h-8 w-8 rounded-full">
+                    <span class="text-xl font-bold"><span class="text-white">HAPPEE</span><span class="text-secondary">ANTZ</span></span>
+                </div>
+                <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> AntWorks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenuToggle.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+            document.addEventListener("click", function (event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+
+            // Intersection Observer for Scroll Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        const animation = entry.target.getAttribute("data-animation");
+                        if (animation) {
+                            entry.target.classList.add(animation);
+                        }
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, {
+                threshold: 0.2 // Trigger when 20% of the element is visible
+            });
+
+            // Apply observer to all elements with animate-on-scroll class
+            document.querySelectorAll(".animate-on-scroll").forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+</html>
