@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
     <title>HappeeAntz - Hive Hustle Hire</title>
-    <link rel="icon" type="image/x-icon" href="./HAPPYANTZ.PNG">
+    <link rel="icon" type="image/x-icon" src="./HAPPYANTZ.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -75,18 +75,18 @@
             animation: swing 3s ease-in-out infinite;
         }
 
-        /* Job Card Styles */
-        .job-card {
-            @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+        /* Talent Card Styles */
+        .talent-card {
+            @apply bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
         }
-        .job-card-header {
-            @apply p-6 pb-4;
+        .talent-card-header {
+            @apply p-6 pb-4 text-center;
         }
-        .job-card-body {
-            @apply px-6 py-2 space-y-2;
+        .talent-card-body {
+            @apply px-6 py-2 flex-grow;
         }
-        .job-card-footer {
-            @apply px-6 py-4 border-t;
+        .talent-card-footer {
+            @apply px-6 py-4 border-t mt-auto;
         }
     </style>
 </head>
@@ -98,15 +98,15 @@
             <button id="mobileMenuToggle" class="p-2 rounded-md hover:bg-dark-blue-start/10 md:hidden" aria-label="Toggle menu">
                 <i class="fas fa-bars text-xl text-dark-blue-start"></i>
             </button>
-            <a href="./index.html" class="flex items-center gap-3">
-                <img src="./HAPPYANTZ.PNG" alt="HappeeAntz Logo" class="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="./HAPPYANTZ.png" alt="HappeeAntz Logo" class="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110">
                 <span class="text-xl md:text-2xl font-bold tracking-tight boogaloo-regular">
                     <span class="text-primary">HAPPEE</span><span class="text-accent">ANTZ</span>
                 </span>
             </a>
         </div>
         <nav class="hidden md:flex items-center gap-4">
-            <a href="./index.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Home</a>
+            <a href="../index.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Home</a>
             <a href="./hivewisepricing.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Hive Wise Pricing Plans</a>
             <a href="./companies.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-credible jobs</a>
             <a href="./applications.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-mazing talents</a>
@@ -118,7 +118,7 @@
     </div>
     <div id="mobileMenu" class="hidden md:hidden bg-yellow-500 border-t border-dark-blue-start/10 px-4 py-6 shadow-lg">
         <nav class="flex flex-col gap-3">
-            <a href="./index.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Dashboard</a>
+            <a href="../index.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Dashboard</a>
             <a href="./hivewisepricing.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Browse Jobs</a>
             <a href="./companies.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Companies</a>
             <a href="./applications.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Applications</a>
@@ -157,6 +157,7 @@
         });
     });
 </script>
+
     <main class="flex-1">
         <!-- Hero Section -->
         <section class="w-full py-12 md:py-24 lg:py-10 bg-[#368fd8] text-white relative overflow-hidden">
@@ -184,80 +185,117 @@
             </div>
         </section>
 
-        <!-- Featured Jobs Section -->
-        <section id="jobs" class="w-full py-12 md:py-24 bg-white">
+        <!-- Talent Section -->
+        <section id="talents" class="w-full py-12 md:py-24 bg-light-bg">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll" data-animation="fade-in-up">
-                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter text-primary boogaloo-regular">FEATURED JOBS</h2>
-                    <p class="text-gray-500 text-sm md:text-xl max-w-[700px]">Discover top opportunities from leading companies</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter text-primary boogaloo-regular">ANT-CREDIBLE TALENTS</h2>
+                    <p class="text-gray-500 text-sm md:text-xl max-w-[700px]">Discover skilled professionals ready to join your colony</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                    <div class="job-card animate-on-scroll" data-animation="slide-in-left">
-                        <div class="job-card-header">
-                            <div class="flex items-center gap-4">
-                                <img src="https://placehold.co/50x50" alt="Company logo" class="w-12 h-12 rounded-md">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <div class="talent-card animate-on-scroll" data-animation="slide-in-left">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
                                 <div>
-                                    <h3 class="text-lg font-semibold">Senior Software Engineer</h3>
-                                    <p class="text-sm text-gray-500">TechCorp</p>
+                                    <h3 class="text-lg font-semibold">Alex Johnson</h3>
+                                    <p class="text-sm text-gray-500">Full Stack Developer</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="job-card-body">
+                        <div class="talent-card-body">
                             <div class="space-y-2">
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Location:</span><span class="text-sm text-gray-500">New York, NY</span></div>
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Salary:</span><span class="text-sm text-gray-500">$120k - $150k</span></div>
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Type:</span><span class="text-sm text-gray-500">Full-time</span></div>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">React</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Node.js</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">TypeScript</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">MongoDB</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">5 years of experience building scalable web applications.</p>
                             </div>
                         </div>
-                        <div class="job-card-footer">
-                            <a href="#" class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90 text-center block">View Details</a>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
                         </div>
                     </div>
-                    <div class="job-card animate-on-scroll" data-animation="fade-in-up">
-                        <div class="job-card-header">
-                            <div class="flex items-center gap-4">
-                                <img src="https://placehold.co/50x50" alt="Company logo" class="w-12 h-12 rounded-md">
+                    <div class="talent-card animate-on-scroll" data-animation="fade-in-up">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
                                 <div>
-                                    <h3 class="text-lg font-semibold">UX Designer</h3>
-                                    <p class="text-sm text-gray-500">DesignInc</p>
+                                    <h3 class="text-lg font-semibold">Sarah Miller</h3>
+                                    <p class="text-sm text-gray-500">UX/UI Designer</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="job-card-body">
+                        <div class="talent-card-body">
                             <div class="space-y-2">
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Location:</span><span class="text-sm text-gray-500">San Francisco, CA</span></div>
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Salary:</span><span class="text-sm text-gray-500">$90k - $120k</span></div>
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Type:</span><span class="text-sm text-gray-500">Full-time</span></div>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Figma</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Adobe XD</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Sketch</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">UI Design</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">7 years creating beautiful user experiences.</p>
                             </div>
                         </div>
-                        <div class="job-card-footer">
-                            <a href="#" class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90 text-center block">View Details</a>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
                         </div>
                     </div>
-                    <div class="job-card animate-on-scroll" data-animation="slide-in-right">
-                        <div class="job-card-header">
-                            <div class="flex items-center gap-4">
-                                <img src="https://placehold.co/50x50" alt="Company logo" class="w-12 h-12 rounded-md">
+                    <div class="talent-card animate-on-scroll" data-animation="fade-in-up">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
                                 <div>
-                                    <h3 class="text-lg font-semibold">Project Manager</h3>
-                                    <p class="text-sm text-gray-500">BuildCo</p>
+                                    <h3 class="text-lg font-semibold">David Chen</h3>
+                                    <p class="text-sm text-gray-500">Data Scientist</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="job-card-body">
+                        <div class="talent-card-body">
                             <div class="space-y-2">
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Location:</span><span class="text-sm text-gray-500">Chicago, IL</span></div>
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Salary:</span><span class="text-sm text-gray-500">$100k - $130k</span></div>
-                                <div class="flex items-center gap-2"><span class="text-sm font-medium">Type:</span><span class="text-sm text-gray-500">Full-time</span></div>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Python</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">TensorFlow</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">SQL</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Machine Learning</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">4 years of experience in data analysis.</p>
                             </div>
                         </div>
-                        <div class="job-card-footer">
-                            <a href="#" class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90 text-center block">View Details</a>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="talent-card animate-on-scroll" data-animation="slide-in-right">
+                        <div class="talent-card-header">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="https://placehold.co/80x80" alt="Talent profile" class="w-20 h-20 rounded-full">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Emily Rodriguez</h3>
+                                    <p class="text-sm text-gray-500">Project Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="talent-card-body">
+                            <div class="space-y-2">
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Agile</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Scrum</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">JIRA</span>
+                                    <span class="text-xs bg-secondary/20 px-2 py-1 rounded-full">Leadership</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">8 years managing successful tech projects.</p>
+                            </div>
+                        </div>
+                        <div class="talent-card-footer">
+                            <button class="w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-primary/90">View Profile</button>
                         </div>
                     </div>
                 </div>
-                <div class="mt-8 flex justify-center animate-on-scroll" data-animation="fade-in-up">
-                    <a href="#" class="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary/10 transition-all duration-300">View All Jobs</a>
+                <div class="flex justify-center mt-8 animate-on-scroll" data-animation="fade-in-up">
+                    <button class="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary/10 transition-all duration-300">View All Talents</button>
                 </div>
             </div>
         </section>
