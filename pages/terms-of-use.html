@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <title>HappeeAntz - Privacy Policy</title>
+    <link rel="icon" type="image/x-icon" href="./HAPPYANTZ.PNG">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: "#368fd8", foreground: "#FFFFFF" },
+                        secondary: { DEFAULT: "#FDCB58", foreground: "#000000" },
+                        accent: { DEFAULT: "#E78B00", foreground: "#FFFFFF" },
+                        "light-bg": "#F4F6F9",
+                        "dark-blue-start": "#368fd8",
+                        "ant-yellow": "#f2c94c",
+                        "ant-blue": "#3498db",
+                    },
+                    fontFamily: { sans: ["Inter", "sans-serif"] },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .boogaloo-regular {
+            font-family: "Boogaloo", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-foreground font-sans min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-gradient-to-r from-secondary to-yellow-500 text-dark-blue-start shadow-md">
+    <div class="container mx-auto flex h-20 items-center justify-between px-4">
+        <div class="flex items-center gap-4">
+            <button id="mobileMenuToggle" class="p-2 rounded-md hover:bg-dark-blue-start/10 md:hidden" aria-label="Toggle menu">
+                <i class="fas fa-bars text-xl text-dark-blue-start"></i>
+            </button>
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="./HAPPYANTZ.png" alt="HappeeAntz Logo" class="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110">
+                <span class="text-xl md:text-2xl font-bold tracking-tight boogaloo-regular">
+                    <span class="text-primary">HAPPEE</span><span class="text-accent">ANTZ</span>
+                </span>
+            </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-4">
+            <a href="../index.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Home</a>
+            <a href="./hivewisepricing.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Hive Wise Pricing Plans</a>
+            <a href="./companies.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-credible jobs</a>
+            <a href="./applications.html" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 nav-link">Ant-mazing talents</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+            <a href="" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">LOGIN</a>
+            <a href="" class="px-3 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">REGISTER</a>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-yellow-500 border-t border-dark-blue-start/10 px-4 py-6 shadow-lg">
+        <nav class="flex flex-col gap-3">
+            <a href="../index.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Dashboard</a>
+            <a href="./hivewisepricing.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Hive Wise Pricing Plans</a>
+            <a href="./companies.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Ant-credible jobs</a>
+            <a href="./applications.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Ant-mazing talents</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">Login</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">Register</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .nav-link.active {
+        background-color: #ffffff;
+        color: #1e3a8a;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #mobileMenu .nav-link.active {
+        background-color: #1e3a8a;
+        color: #ffffff;
+        font-weight: bold;
+    }
+</style>
+
+<main class="flex-1">
+    <!-- Hero Section -->
+    <section class="w-full py-12 md:py-24 lg:py-10 bg-[#368fd8] text-white relative overflow-hidden">
+        <div class="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 gap-8">
+            <div class="flex-shrink-0 order-1 lg:order-2 animate-on-scroll" data-animation="slide-in-right">
+                <img src="./HAPPYANTZ2.png" alt="Happee Antz Character" class="h-64 sm:h-80 md:h-96 lg:h-[500px] w-auto transition-transform duration-300 hover:scale-105 mx-auto">
+            </div>
+            <div class="text-center max-w-2xl order-2 lg:order-1 animate-on-scroll" data-animation="fade-in-up">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold boogaloo-regular tracking-tight text-white">Terms of Use</h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-white-200 mt-4">
+                    Welcome to the <span class="boogaloo-regular">Happee Antz</span> Colony!
+                </p>
+                <p class="text-sm sm:text-md md:text-lg text-white-300 mt-4">
+                    Let’s get buzzing toward success with some ground rules!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms of Use Section -->
+    <section class="w-full py-12 md:py-24 bg-dark-bg">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-primary boogaloo-regular mb-6">Terms of Use</h2>
+                <p class="text-gray-600 mb-8"><strong>Last Updated:</strong> March 1, 2025</p>
+
+                <p class="text-gray-700 mb-6">Welcome to the Happee Antz Colony! Before you dive into exciting job opportunities or start building your dream team, let’s go over some ground rules! Our Terms of Use are here to ensure that everyone in the Happee Antz community, from job seekers to employers, enjoys a smooth, fair, and hassle-free experience.</p>
+
+                <p class="text-gray-700 mb-6">Think of this as your guide to making the most out of Happee Antz, how to use the platform, what’s expected, and how we keep things running efficiently and securely.</p>
+
+                <p class="text-gray-700 mb-6">By signing up, you're officially part of the colony, and we’re all about teamwork here! So grab a seat, take a quick read, and let’s get buzzing toward success!</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">1. Acceptance of Terms</h3>
+                <p class="text-gray-700 mb-4">By creating an account, accessing, or using Happee Antz, you acknowledge and agree to the following conditions:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>You confirm that you are at least 18 years old or have obtained parental or legal guardian consent to use the platform if you are a minor.</li>
+                    <li>You agree to comply fully with these Terms of Use and our Privacy Policy, as well as any applicable laws and regulations governing your use of the platform.</li>
+                    <li>You commit to using Happee Antz solely for lawful and legitimate purposes, ensuring that your activities on the platform do not violate any legal, ethical, or professional standards.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Failure to comply with these terms may result in account suspension or termination at our sole discretion.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">2. Account Registration & Responsibilities</h3>
+                <h4 class="text-lg font-semibold text-primary mb-2">2.1 Creating an Account</h4>
+                <p class="text-gray-700 mb-4">To access certain features of Happee Antz, users are required to create either an Employer or Job Seeker account. When registering, you agree to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Provide accurate, current, and complete information during the registration process.</li>
+                    <li>Regularly update your account information to ensure its accuracy and completeness.</li>
+                    <li>Be solely responsible for maintaining the confidentiality of your account credentials (username, password, and any other security information).</li>
+                    <li>Accept full responsibility for all activities that occur under your account, whether or not authorized by you.</li>
+                    <li>Failure to provide accurate information or maintain account security may result in the suspension or termination of your account.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">2.2 Prohibited Activities</h4>
+                <p class="text-gray-700 mb-4">By using Happee Antz, you agree that you will not engage in any of the following activities:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Submitting false, inaccurate, or misleading information in your profile, job applications, or job postings. Posting fraudulent, deceptive, or scam job listings.</li>
+                    <li>Impersonating any person, company, or entity, or misrepresenting your affiliation with any organization.</li>
+                    <li>Using the platform for spam, phishing, unsolicited promotions, or any other unlawful activities.</li>
+                    <li>Attempting to hack, disrupt, or compromise the functionality, security, or performance of the platform.</li>
+                    <li>Violating any applicable laws, regulations, or third-party rights.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to suspend, restrict, or terminate any account without prior notice if there is reasonable belief that a user is engaging in any prohibited activities or violating these Terms of Use. If you encounter any suspicious activity or listings, please report them immediately to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a>.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">3. Job Posting & Application Rules</h3>
+                <h4 class="text-lg font-semibold text-primary mb-2">3.1 Guidelines for Employers</h4>
+                <p class="text-gray-700 mb-4">Employers utilizing Happee Antz to post job opportunities must adhere to the following standards:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Compliance with Laws & Ethical Standards</strong> – All job postings must comply with local and international labor laws, be ethical, non-discriminatory, and uphold professional hiring practices. Discriminatory listings based on race, gender, age, religion, disability, or any other protected characteristic are strictly prohibited.</li>
+                    <li><strong>Clear & Accurate Job Descriptions</strong> – Employers must provide precise and detailed job postings, including the job title, responsibilities, qualifications, work location (remote, hybrid, on-site), salary range (if applicable), and employment type (full-time, part-time, freelance, contract, etc.). Misleading or vague job postings will not be allowed.</li>
+                    <li><strong>No Recruitment Fees for Job Seekers</strong> – Employers are strictly prohibited from charging job seekers any fees related to recruitment, placement, or application processing. Any employer found violating this policy may face immediate suspension from the platform.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to review, modify, or remove any job listing that violates these policies, appears deceptive, or is reported by users. Repeated violations may lead to account suspension or termination.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">3.2 Guidelines for Job Seekers</h4>
+                <p class="text-gray-700 mb-4">Job seekers using Happee Antz to explore career opportunities are expected to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Provide Honest & Accurate Information</strong> – Resumes, applications, and profiles must reflect truthful details regarding work experience, education, skills, and certifications. Any form of misrepresentation or falsification may result in account suspension.</li>
+                    <li><strong>Maintain Professionalism in Applications</strong> – Job seekers should submit applications in a professional and respectful manner. Proper etiquette should be maintained when communicating with employers, attending interviews, and negotiating job offers.</li>
+                    <li><strong>Stay Alert & Report Fraudulent Job Offers</strong> – While Happee Antz actively monitors job postings, job seekers should exercise caution and report any suspicious job offers, fraudulent recruitment schemes, or unethical employer behavior. If a job post requests payment, personal financial details, or other sensitive information unrelated to the hiring process, it should be reported immediately.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to review and investigate reports of fraudulent activities and take necessary action to maintain a safe and reliable job marketplace. For inquiries or to report concerns, please contact us at <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a>.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">4. Prices & Payments</h3>
+                <h4 class="text-lg font-semibold text-primary mb-2">4.1 Pricing Structure</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Employer Pricing (in USD)</strong> – Prices for employers are displayed in United States Dollars (USD) and are subject to the current exchange rate in your country at the time of payment.</li>
+                    <li><strong>Job Seeker Pricing (in PHP)</strong> – Prices for job seekers are displayed in Philippine Peso (PHP). If accessing the platform from outside the Philippines, prices are subject to the prevailing conversion rate in your respective country.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">All pricing is subject to change without prior notice based on market adjustments, promotions, or system updates.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.2 Salary & Rate Listings</h4>
+                <p class="text-gray-700 mb-6">All salary rates, hourly wages, or project fees displayed on the website are set individually by the employer, job seeker, freelancer, or worker based on their desired compensation. Happee Antz does not influence or guarantee the rates posted by job seekers; however, we encourage fair and competitive pricing based on industry standards.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.3 Subscription Requirements and Payments Policy</h4>
+                <p class="text-gray-700 mb-4">To fully access Happee Antz services, users must have an active subscription:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>For Employers:</strong> A Happee Antz subscription is required before you can message, communicate, and hire staff. You may select a subscription plan from the options available on our website.</li>
+                    <li><strong>For Job Seekers:</strong> A Happee Antz subscription is required before you can apply to multiple job postings. Available subscription plans are listed on the website for your selection.</li>
+                    <li>Upon subscribing to your chosen paid plan, the applicable charges will be automatically processed at the time of registration. The subscription fee remains applicable regardless of usage, meaning you will be billed for the plan whether or not you actively use the service during the subscription period.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">For details on cancellations and eligibility for refunds, please refer to our Refund Policy. Subscription plans vary in features, validity periods, and pricing. Please review the available plans carefully before purchasing.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.4 Payment Methods</h4>
+                <p class="text-gray-700 mb-4">We currently accept payments through the following methods:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Debit & Credit Cards: Visa, Mastercard, American Express</li>
+                    <li>Electronic Mobile Wallets: GCash, PayMaya</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Note: We do not accept cash, bank deposits, or cryptocurrency at this time.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.5 Subscription Approval & Violations</h4>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to refuse or cancel any subscription if we detect violations of our Terms of Use. This includes, but is not limited to, fraudulent activity, false information, and misuse of the platform. If your subscription is canceled due to a violation, you will not be eligible for a refund.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.6 Payment Accuracy & Validation</h4>
+                <p class="text-gray-700 mb-6">You confirm that all payment details provided (e.g., card information, billing address) are accurate and up-to-date. We reserve the right to verify your credit or debit card details before activating your subscription. If payment validation fails, we may suspend or decline your access to our services until the issue is resolved.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.7 Auto-Renewals & Cancellations</h4>
+                <p class="text-gray-700 mb-4">Subscriptions are NOT automatically renewed by default.</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Users have the option to enable auto-renewal to ensure continuous access to Happee Antz services without interruption.</li>
+                    <li>You may cancel your subscription at any time before the next billing cycle to avoid unwanted charges.</li>
+                    <li>No refunds will be issued for any unused portion of a subscription after cancellation.</li>
+                    <li>To check or manage your subscription status, visit your account settings on the platform.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">4.8 Refund Policy</h4>
+                <p class="text-gray-700 mb-6">All subscription purchases are final, and we do not offer refunds for unused or remaining subscription time. In cases of accidental duplicate charges or billing errors, please contact our support team for assistance. For payment-related inquiries, please reach out to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject 'BILLING CONCERN'.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">5. Account Creation & Password</h3>
+                <h4 class="text-lg font-semibold text-primary mb-2">5.1 Job Seeker Accounts</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Job seekers are permitted to create only one (1) service account on Happee Antz.</li>
+                    <li>If duplicate accounts are detected, Happee Antz reserves the right to terminate the duplicate accounts without prior notice.</li>
+                    <li>Any violation of our Terms of Use may result in permanent account termination and a ban from the platform.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">If you believe your account was wrongfully terminated, you may submit an appeal request by emailing <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject "Account Appeal." However, Happee Antz reserves the right to make all final and irrevocable decisions regarding account terminations.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">5.2 Employer Accounts</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Employers are allowed to create multiple accounts, provided they submit the necessary primary verification requirements for each account.</li>
+                    <li>All additional employer accounts apart from the original service account are subject to approval to prevent fraudulent activities, spam, and misuse of the platform.</li>
+                    <li>Happee Antz reserves the right to terminate or permanently ban an employer’s account without prior notice if it is found to be in violation of our Terms of Use.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Employers who wish to appeal an account termination may do so by emailing <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject "Account Appeal." All decisions made by Happee Antz regarding account suspensions and terminations are final and irrevocable.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">5.3 Password Security & Responsibility</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz prioritizes user security and data protection; however, we do not store passwords in our database. As a result, users bear sole responsibility for ensuring the safety and confidentiality of their login credentials.</li>
+                    <li>If you forget your password or email, you may use the self-service password recovery options provided on our platform.</li>
+                    <li>Happee Antz does not have access to reset passwords without user authorization and will never request sensitive login credentials.</li>
+                    <li>You are fully responsible for all activities under your account, whether or not they are authorized by you.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">If you suspect unauthorized access or misuse of your account, you must notify us immediately to prevent further security risks. Report unauthorized access to: <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject "Unauthorized Access".</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">5.4 Use of Public or Shared Devices</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>When accessing Happee Antz from a public or shared computer, you must:</li>
+                    <li>Log out of your account once you have finished using the platform.</li>
+                    <li>Ensure no saved passwords or auto-fill data are left on the device.</li>
+                    <li>Happee Antz is not legally responsible for any unauthorized access to your account resulting from failure to log out or use of an insecure device. Users are advised to exercise caution when accessing their accounts from public networks or shared devices.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">5.5 Unauthorized Duplicate Accounts</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz does not take legal responsibility for unauthorized duplicate accounts created without a user's consent.</li>
+                    <li>If you discover an unauthorized duplicate account under your name or company, you should report it to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject "Unauthorized Duplicate Account."</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Once verified, duplicate accounts will be permanently and irrevocably terminated to maintain the integrity of the platform.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">5.6 Restriction on Account Sharing</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Only the registered job seeker or employer has the right to access and use their service account.</li>
+                    <li>Employers may only grant authorized personnel within their company access to their accounts; allowing anyone outside the company or jurisdiction to use the account is strictly prohibited.</li>
+                    <li>Sharing, transferring, or selling accounts is a direct violation of these Terms of Use.</li>
+                    <li>By allowing unauthorized third parties to access your account, you are in breach of these Terms, and Happee Antz reserves the right to terminate your account immediately without prior notice.</li>
+                </ul>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">6. Worker Payments & Employment Contracts</h3>
+                <h4 class="text-lg font-semibold text-primary mb-2">6.1 Employment Agreement Between Employers & Job Seekers</h4>
+                <p class="text-gray-700 mb-4">Happee Antz serves solely as a job marketplace platform that facilitates connections between employers and job seekers. We are not a party to any employment contract or agreement established between the employer and the job seeker.</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>All contractual terms, including salary, benefits, work conditions, and legal obligations, are negotiated and agreed upon directly between the employer and job seeker.</li>
+                    <li>Happee Antz is not legally responsible for any provisions set forth in employment agreements, including but not limited to payment disputes, contract violations, or employment termination.</li>
+                    <li>In the event of a breach of contract or dispute between the employer and job seeker, both parties must resolve the issue independently through their agreed-upon contractual terms or applicable labor laws.</li>
+                    <li>Happee Antz reserves the right to suspend, restrict, or permanently ban any service account that is found to be in violation of the platform’s Terms of Use, depending on the severity of the violation.</li>
+                    <li>While we take reports of unethical or fraudulent hiring practices seriously, Happee Antz does not mediate employment disputes between employers and job seekers.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">6.2 Platform Fees & Payment Policy</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz operates solely as a job marketplace and does not take commissions or deductions from a job seeker's earnings unless explicitly agreed upon by Happee Antz and the employer under a separate contractual agreement.</li>
+                    <li>Happee Antz only collects payments from the subscription plans available on the website. These subscription fees grant users access to the platform's premium features but do not serve as recruitment or employment fees.</li>
+                    <li>Employers and job seekers are responsible for handling all financial transactions and payments related to employment, without involvement from Happee Antz.</li>
+                    <li>Any additional fees, commissions, or revenue-sharing agreements between Happee Antz and employers will be clearly outlined and agreed upon in a formal, separate agreement outside of the standard job posting and hiring process.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Employers should be transparent about salary offers, while job seekers should verify compensation terms before accepting any job offer. For concerns regarding fraudulent payment practices, users may report violations to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a>.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">6.3 Responsibility for Government-Mandated Benefits</h4>
+                <p class="text-gray-700 mb-4">Happee Antz serves purely as a job marketplace platform and is not responsible for the provision, administration, or enforcement of any government-mandated benefits for either job seekers or employers.</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Employers are solely responsible for ensuring compliance with labor laws, including but not limited to social security contributions, health insurance, tax deductions, and other statutory benefits required by the governing labor authorities in their respective countries.</li>
+                    <li>Job seekers are responsible for verifying and negotiating employment terms with prospective employers, including any government-mandated benefits applicable to their role.</li>
+                    <li>Happee Antz does not act as an employer or hiring agency and, therefore, does not provide social security coverage, health benefits, retirement contributions, or any other employment-related entitlements.</li>
+                    <li>Job seekers and employers are encouraged to review and comply with relevant labor laws and government regulations in their jurisdiction to ensure full compliance with mandatory benefits and legal requirements.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">6.4 Promotions, Payments, and Third-Party Transactions</h4>
+                <p class="text-gray-700 mb-4">Happee Antz does not provide holiday bonuses, special discounts, or promotional offers unless such offers are officially displayed on our website and communicated through our formal channels, including:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Our official website <a href="http://www.happeeantz.com" class="text-primary hover:underline">www.happeeantz.com</a></li>
+                    <li>Official Happee Antz email communications with a domain of happeeantz.com</li>
+                    <li>Verified social media accounts</li>
+                </ul>
+                <p class="text-gray-700 mb-6">We do not authorize any third-party organization, representative, or agent to act on behalf of Happee Antz regarding payments, discounts, or financial transactions outside our official platform. Any transactions made through unauthorized third parties or misrepresentation of Happee Antz's name are strictly outside our responsibility. Users who engage in unauthorized transactions or fall victim to fraudulent activities outside our platform do so at their own risk. Happee Antz shall not be held legally liable for any financial loss, fraud, or misrepresentation conducted by third parties falsely claiming affiliation with our platform. Always verify promotions and transactions directly on our website or official communication channels before making any payments or commitments. If you suspect fraudulent activities, please report them immediately to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a>.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">6.5 Ensuring Secure Payments for Candidates</h4>
+                <p class="text-gray-700 mb-4">At Happee Antz, we strive to provide a safe and trustworthy job marketplace. However, job seekers are encouraged to verify the payment terms and methods agreed upon with an employer before accepting a job offer.</p>
+                <p class="text-gray-700 mb-4">While Happee Antz reviews an employer's past transaction history, we do not have full visibility into or control over an employer’s future payment behavior. Our verification process helps provide insights, but it does not serve as a guarantee of consistent and timely payments from employers.</p>
+                <p class="text-gray-700 mb-4">As Happee Antz is not a direct party in employment agreements, we do not assume legal or financial responsibility for delayed, partial, or non-payment by an employer. In the event of a reported payment issue, our course of action includes:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Investigating the employer’s transaction history</li>
+                    <li>Taking appropriate measures, including account suspension or permanent banning, to prevent further incidents</li>
+                    <li>Encouraging job seekers to report any concerns so we can help maintain a safe job marketplace</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Always confirm payment terms in writing before starting work, and report any suspicious employer behavior to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> for further review. Happee Antz remains committed to creating a secure and professional hiring environment.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">7. Intellectual Property Ownership</h3>
+                <p class="text-gray-700 mb-4">Happee Antz (<a href="http://www.happeeantz.com" class="text-primary hover:underline">www.happeeantz.com</a>) and all related content, materials, and features available on the platform—including but not limited to logos, trademarks, designs, text, graphics, images, software, databases, job listings, and other proprietary information—are the sole property of Happee Antz or its licensed partners. These materials are protected under copyright, trademark, and other intellectual property laws in the Republic of the Philippines and international intellectual property regulations.</p>
+                <p class="text-gray-700 mb-6">By using Happee Antz, you acknowledge and agree that all intellectual property rights associated with the platform belong exclusively to Happee Antz, and you may only use the platform’s materials in accordance with these Terms of Use.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">7.1 Ownership & Rights</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz retains full ownership of all intellectual property rights associated with its platform, brand, and proprietary technologies.</li>
+                    <li>Users are granted a limited, non-exclusive, non-transferable, and revocable right to access and use the platform strictly for job searching, hiring, and recruitment-related activities.</li>
+                    <li>Any unauthorized reproduction, modification, distribution, sale, or commercial use of Happee Antz’s intellectual property without prior written consent is strictly prohibited and may result in legal action.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">7.2 User-Generated Content & Licensing Rights</h4>
+                <p class="text-gray-700 mb-4">Happee Antz allows users—both employers and job seekers—to submit content, including job postings, resumes, profiles, company descriptions, and other materials.</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Retention of Ownership:</strong> Users retain ownership of any content they submit; however, by posting content on Happee Antz, users grant Happee Antz a worldwide, royalty-free, non-exclusive license to use, store, display, distribute, and promote such content within the platform for operational and promotional purposes.</li>
+                    <li><strong>Content Responsibility:</strong> Users are solely responsible for ensuring that any content they submit does not infringe on third-party intellectual property rights. Happee Antz reserves the right to remove any content that violates intellectual property laws or these terms.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">7.3 Restrictions on Use</h4>
+                <p class="text-gray-700 mb-4">To maintain the integrity of the platform, users must not:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Copy, modify, distribute, or exploit any content owned by Happee Antz for commercial purposes without written authorization.</li>
+                    <li>Reverse-engineer, decompile, or attempt to gain unauthorized access to Happee Antz’s technology, source code, database, or proprietary software.</li>
+                    <li>Use Happee Antz’s name, trademarks, or brand assets in any unauthorized manner, including misleading advertising or fraudulent representations.</li>
+                    <li>Use automated tools, bots, or data-mining technologies to extract content or disrupt platform functionality.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Any violation of these restrictions may result in immediate termination of access, legal action, and/or financial penalties.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">7.4 Reporting Intellectual Property Violations</h4>
+                <p class="text-gray-700 mb-4">Happee Antz respects and upholds intellectual property rights. If you believe that your copyrighted material or trademark has been used without permission on our platform, you may submit a formal complaint by emailing <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject "Intellectual Property Violation."</p>
+                <p class="text-gray-700 mb-4">Your complaint should include:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>A detailed description of the copyrighted or trademarked material that has allegedly been infringed.</li>
+                    <li>Proof of ownership or legal authorization to act on behalf of the copyright/trademark owner.</li>
+                    <li>A direct link or reference to the infringing content on Happee Antz.</li>
+                    <li>Your full contact details for follow-up.</li>
+                </ul>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">8. Third-Party Websites and Content</h3>
+                <p class="text-gray-700 mb-6">Happee Antz may provide links to, integrate with, or otherwise make available third-party websites, services, advertisements, or content ("Third-Party Content") for informational purposes, convenience, or additional functionalities. However, Happee Antz does not own, control, or take responsibility for any Third-Party Content accessible through our platform.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">8.1 No Endorsement or Responsibility</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>The inclusion of links or references to third-party websites does not imply endorsement, sponsorship, or affiliation with such entities.</li>
+                    <li>Happee Antz does not guarantee the accuracy, reliability, legality, or security of any Third-Party Content, including but not limited to job postings, employer websites, external application links, or recruitment services.</li>
+                    <li>Users interact with third-party websites at their own risk, and Happee Antz shall not be held responsible for any loss, damage, or legal liabilities arising from such interactions.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">8.2 Third-Party Transactions and Communications</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Any transactions, communications, or agreements made between users and third-party providers (such as recruitment agencies, payment processors, or external job listing services) are solely between the parties involved.</li>
+                    <li>Happee Antz does not process, monitor, or intervene in third-party financial transactions or contractual agreements.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">8.3 Security and Data Privacy Risks</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Third-party websites may have separate privacy policies, terms of use, and security measures, which Happee Antz does not regulate or oversee.</li>
+                    <li>Users should exercise caution and review third-party privacy policies before submitting any personal, financial, or sensitive information to external sites.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">8.4 Reporting Malicious or Misleading Third-Party Content</h4>
+                <p class="text-gray-700 mb-6">If a third-party website linked on Happee Antz is found to be fraudulent, misleading, or in violation of ethical standards, users may report it to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> for review and judgement. Happee Antz reserves the right to remove or restrict access to third-party links that are deemed harmful to users. By using Happee Antz, you acknowledge and agree that any interactions with third-party websites or content are at your own discretion and risk. Happee Antz is not liable for damages, losses, or disputes resulting from engagement with third-party services.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">9. Indemnification</h3>
+                <p class="text-gray-700 mb-4">By using Happee Antz, you agree to indemnify, defend, and hold harmless Happee Antz, its affiliates, officers, directors, employees, agents, licensors, and service providers from and against any and all claims, liabilities, damages, losses, costs, and expenses (including legal fees) arising out of or related to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>Your use or misuse of the platform – Including but not limited to job applications, employer interactions, job postings, or communications made through Happee Antz.</li>
+                    <li>Your violation of these Terms of Use – Any breach of our policies, guidelines, or agreements.</li>
+                    <li>Your violation of any applicable laws or third-party rights – Including intellectual property rights, privacy laws, employment regulations, or contractual obligations.</li>
+                    <li>Fraudulent, misleading, or unauthorized activities conducted through your account – Whether performed by you or a third party using your credentials.</li>
+                    <li>Disputes between job seekers and employers – Happee Antz is not a party to employment agreements, and any conflicts regarding payments, job expectations, or legal obligations must be resolved directly between the involved parties.</li>
+                </ul>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">10. Limitation of Liability</h3>
+                <p class="text-gray-700 mb-4">Happee Antz operates solely as a job marketplace platform that facilitates connections between job seekers and employers. While we are committed to providing a secure and reliable service, Happee Antz shall not be held liable for any indirect, incidental, special, consequential, or punitive damages arising from the use of our platform. This includes, but is not limited to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>Loss of income, employment, business opportunities, or reputational harm resulting from job applications, employer relationships, hiring decisions, or unsuccessful job placements. Happee Antz does not guarantee employment, career progression, or business success.</li>
+                    <li>Unauthorized access, data breaches, or system disruptions caused by external threats, third parties, hacking attempts, or user negligence. While we implement industry-standard security measures, we cannot guarantee that our platform will remain completely free from cyber threats.</li>
+                    <li>Misrepresentation, fraud, or misconduct by other users, including employers or job seekers. Happee Antz does not conduct background checks on users and does not verify the legitimacy of all job listings, employer claims, or applicant credentials. Users are responsible for conducting their own due diligence.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">By using Happee Antz, you acknowledge that you do so at your own risk, and the platform shall not be liable for any disputes, damages, or losses incurred through interactions with other users.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">11. User Responsibility</h3>
+                <p class="text-gray-700 mb-4">By accessing and using Happee Antz, you acknowledge and agree that:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>You bear full responsibility for your actions, decisions, and interactions on the platform. This includes applying for jobs, communicating with employers, and entering into any professional agreements.</li>
+                    <li>You will not hold Happee Antz liable for any disputes, damages, or losses that arise from third-party interactions, including employer-employee disagreements, payment issues, or hiring conflicts.</li>
+                    <li>You will cooperate fully with Happee Antz in any investigations related to fraud, security breaches, or violations of our terms. This may include providing necessary information, documents, or records to support an investigation.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">If you have concerns, disputes, or require legal clarification, please contact <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> for further assistance.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">12. Disclaimer of Warranties</h3>
+                <p class="text-gray-700 mb-4">Happee Antz provides its job marketplace platform, services, and content on an "as-is" and "as-available" basis, without any express or implied warranties of any kind. While we strive to ensure the accuracy, reliability, and security of our platform, Happee Antz makes no guarantees or warranties regarding the following:</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">A. Accuracy and Reliability of Job Listings and Employer Information</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz does not guarantee the accuracy, completeness, or legitimacy of job postings, employer information, or candidate profiles.</li>
+                    <li>Employers and job seekers are responsible for verifying job offers, company details, salary agreements, and any other contractual terms before proceeding with an employment arrangement.</li>
+                    <li>Happee Antz is not responsible for fraudulent job postings, misrepresentation, or misleading information provided by users on the platform.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">B. Availability and Performance of the Platform</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>While we aim to maintain uninterrupted service, Happee Antz does not warrant that the platform will always be available, error-free, or free from disruptions, technical issues, or downtime.</li>
+                    <li>We do not guarantee that our website, servers, or third-party integrations will be free of viruses, malware, or other harmful components. Users are advised to use up-to-date security software when accessing the platform.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">C. Employment Outcomes and Hiring Success</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz is not an employer, recruiter, or hiring agency and does not guarantee job placement, employment success, or hiring outcomes.</li>
+                    <li>Job seekers are solely responsible for securing employment, negotiating job terms, and ensuring the legitimacy of job offers.</li>
+                    <li>Employers are responsible for conducting their own hiring assessments, interviews, and due diligence when selecting candidates.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">D. Security and Data Integrity</h4>
+                <p class="text-gray-700 mb-6">Happee Antz implements security measures to protect user data, but we do not guarantee absolute security against hacking, cyber threats, or unauthorized access. Users are responsible for protecting their login credentials, passwords, and sensitive information while using the platform.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">13. Internet Delays, Website Downtime, and Platform Modifications</h3>
+                <p class="text-gray-700 mb-4">At Happee Antz, we strive to provide a seamless, reliable, and efficient job marketplace experience for both employers and job seekers. However, due to the nature of internet-based services, users may experience occasional delays, downtime, or platform modifications. By using Happee Antz, you acknowledge and agree to the following policies:</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">13.1 Internet Delays & Website Downtime</h4>
+                <p class="text-gray-700 mb-4">Happee Antz does not guarantee uninterrupted access to the platform, as internet delays, server outages, scheduled maintenance, and unforeseen technical issues may occasionally occur.</p>
+                <p class="text-gray-700 mb-4">Users may experience slow loading times, temporary inaccessibility, or disruptions due to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>High traffic volumes</li>
+                    <li>Network or connectivity issues beyond our control</li>
+                    <li>Hosting server maintenance or updates</li>
+                    <li>Cybersecurity threats, including hacking attempts or DDoS attacks</li>
+                </ul>
+                <p class="text-gray-700 mb-6">While we make every effort to minimize downtime and restore access promptly, Happee Antz shall not be held liable for any direct or indirect losses resulting from website unavailability. Users are encouraged to check their internet connection, device compatibility, and browser settings to ensure an optimal browsing experience.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">13.2 Scheduled Maintenance & Service Interruptions</h4>
+                <p class="text-gray-700 mb-4">To enhance security, functionality, and performance, Happee Antz periodically performs scheduled maintenance on its systems.</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>During maintenance periods, some or all features of the platform may be temporarily unavailable.</li>
+                    <li>We will strive to provide advance notice of scheduled downtime, except in cases where immediate action is required for security or critical system updates.</li>
+                    <li><strong>User Notice:</strong> Important maintenance updates will be announced through email, website notifications, or social media when possible.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">13.3 Platform Modifications & Feature Updates</h4>
+                <p class="text-gray-700 mb-4">Happee Antz reserves the right to modify, update, improve, or discontinue any aspect of the platform at any time without prior notice.</p>
+                <p class="text-gray-700 mb-4">Modifications may include:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>New features or tools to improve user experience</li>
+                    <li>Changes to subscription plans, pricing, or policies</li>
+                    <li>Bug fixes, security enhancements, or system optimizations</li>
+                    <li>Removal of outdated, underused, or redundant features</li>
+                </ul>
+                <p class="text-gray-700 mb-6">While we aim to introduce enhancements without disrupting user experience, Happee Antz shall not be held liable for adjustments that may affect platform accessibility, user preferences, or third-party integrations. <strong>User Responsibility:</strong> Users should regularly review platform updates and policy changes to stay informed about new features and modifications.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">13.4 Limitation of Liability</h4>
+                <p class="text-gray-700 mb-4">Happee Antz is not responsible for any loss, inconvenience, or disruption caused by:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>Temporary website unavailability due to maintenance, updates, or external factors.</li>
+                    <li>User inability to access job listings, applications, or employer communications due to internet issues or device limitations.</li>
+                    <li>Delays in job posting approvals or application submissions resulting from technical errors.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">By using Happee Antz, you acknowledge and accept that occasional interruptions, modifications, and maintenance are necessary for the continued improvement and security of the platform.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">14. Job Posting Policies</h3>
+                <p class="text-gray-700 mb-4">At Happee Antz, we are committed to providing a trusted, professional, and transparent job marketplace where employers and job seekers can connect seamlessly. To maintain fairness, credibility, and compliance with industry standards, all job postings must adhere to the following guidelines. Employers are responsible for ensuring that job listings are accurate, ethical, and compliant with these policies.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.1 Eligibility and Compliance</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>All job postings must comply with local, national, and international labor laws, including fair hiring practices and non-discrimination policies.</li>
+                    <li>Employers must ensure that job descriptions, requirements, and compensation details adhere to ethical hiring standards.</li>
+                    <li>Happee Antz reserves the right to approve, reject, or remove job postings that violate these policies or mislead job seekers.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.2 Job Posting Requirements</h4>
+                <p class="text-gray-700 mb-4">To maintain clarity and professionalism, all job postings must include the following:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Clear and Accurate Job Title</strong> – The title must accurately reflect the position being offered.</li>
+                    <li><strong>Detailed Job Description</strong> – Provide a comprehensive outline of responsibilities, qualifications, required skills, and expectations.</li>
+                    <li><strong>Company Information</strong> – Include a legitimate company name, location, and industry to establish credibility.</li>
+                    <li><strong>Compensation Details (if applicable)</strong> – Employers are encouraged to specify salary range, benefits, and incentives where possible.</li>
+                    <li><strong>Job Type and Work Arrangement</strong> – Indicate whether the role is full-time, part-time, freelance, contractual, remote, hybrid, or on-site.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz strongly discourages vague or incomplete job descriptions, as they may lead to confusion or misrepresentation.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.3 Prohibited Job Listings</h4>
+                <p class="text-gray-700 mb-4">Happee Antz strictly prohibits job postings that involve:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Fraudulent, misleading, or deceptive job offers</li>
+                    <li>Pyramid schemes, multi-level marketing (MLM), or commission-based work with unclear pay structures</li>
+                    <li>Unpaid internships or volunteer positions that do not meet legal employment requirements</li>
+                    <li>Jobs that require upfront fees, security deposits, or recruitment payments from job seekers</li>
+                    <li>Adult content, escort services, gambling, or any work violating legal and ethical standards</li>
+                    <li>Misrepresentation of employer identity, job nature, or company affiliation</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Any employer found posting prohibited job listings may face account suspension or permanent ban from the platform.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.4 Employer Verification & Authenticity</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Employers may be required to undergo verification processes to ensure authenticity and compliance with our platform’s hiring standards.</li>
+                    <li>Happee Antz reserves the right to request additional documentation to verify company legitimacy, especially for new or unverified employers.</li>
+                    <li>Suspicious or incomplete job postings may be delayed or rejected pending further review.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.5 Job Posting Review & Approval Process</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>All job postings undergo an internal review before being published to ensure compliance with our policies.</li>
+                    <li>Job postings typically take 24 to 48 hours to be reviewed, but this may vary based on the volume of submissions.</li>
+                    <li>Employers may be asked to revise or clarify certain aspects of their job listings if they do not meet platform standards.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.6 Consequences of Policy Violations</h4>
+                <p class="text-gray-700 mb-4">Happee Antz takes job posting integrity seriously. Violations of this policy may result in:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Warning or request for job post modifications</li>
+                    <li>Temporary or permanent suspension of job posting privileges</li>
+                    <li>Account suspension or permanent banning for repeated violations</li>
+                    <li>Legal action for fraudulent or misleading job postings (if applicable)</li>
+                </ul>
+                <p class="text-gray-700 mb-6">If a job seeker encounters a suspicious or fraudulent job posting, they are encouraged to report it immediately to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with a subject of "Suspected Fraud" for investigation.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">14.7 Employer Responsibility & Acknowledgment</h4>
+                <p class="text-gray-700 mb-4">By posting jobs on Happee Antz, employers acknowledge and agree to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>Provide genuine, lawful, and ethical job opportunities.</li>
+                    <li>Respond to candidate inquiries and applications in a timely and professional manner.</li>
+                    <li>Comply with all applicable labor laws and employment regulations.</li>
+                    <li>Accept the terms and conditions of this Job Posting Policy and understand that violations may result in account suspension or removal from the platform.</li>
+                </ul>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">15. Job Seeker Verification Policy</h3>
+                <p class="text-gray-700 mb-4">At Happee Antz, we are committed to maintaining a secure, credible, and professional job marketplace. To ensure trust and transparency between job seekers and employers, we have implemented a Job Seeker Verification Policy to authenticate candidate identities and qualifications. By using Happee Antz, job seekers agree to comply with the following verification procedures and guidelines.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">15.1 Purpose of Verification</h4>
+                <p class="text-gray-700 mb-4">The Job Seeker Verification Process is designed to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Ensure authenticity of job seekers’ identities and qualifications.</li>
+                    <li>Protect employers from fraudulent applications and identity misrepresentation.</li>
+                    <li>Maintain a professional and credible hiring platform.</li>
+                    <li>Prevent fake profiles, duplicate accounts, and impersonation.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to request verification documents, conduct checks, or restrict access if a job seeker fails to meet the verification requirements.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">15.2 Verification Process</h4>
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.1 Account Registration & Basic Profile Completion</h5>
+                <p class="text-gray-700 mb-4">To access job opportunities, all job seekers must:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Register using a valid email address and phone number.</li>
+                    <li>Complete their profile with accurate personal and professional information.</li>
+                    <li>Upload an updated resume/CV that reflects their actual experience and skills.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Note: Incomplete profiles may limit access to job applications and employer interactions.</p>
+
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.2 Document Verification (If Required)</h5>
+                <p class="text-gray-700 mb-4">In some cases, job seekers may be required to provide additional verification documents to confirm their identity and professional credentials. These may include:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Valid Government-Issued ID (Passport, Driver’s License, National ID, or equivalent)</li>
+                    <li>Educational Certificates & Diplomas (If required for certain job positions)</li>
+                    <li>Professional Licenses or Certifications (For regulated industries)</li>
+                    <li>Proof of Work Experience (Company ID, employment certificates, or references)</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to request, review, and approve verification documents before granting full platform access. Any attempt to provide false, edited, or misleading documents will result in immediate account suspension or permanent ban from the platform.</p>
+
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.3 Prohibited Activities & Verification Violations</h5>
+                <p class="text-gray-700 mb-4">Job seekers must ensure that all information submitted is truthful, accurate, and verifiable. The following actions are strictly prohibited:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Creating multiple or fake accounts to increase job application chances.</li>
+                    <li>Providing false employment history, qualifications, or identity information.</li>
+                    <li>Submitting someone else’s resume or impersonating another candidate.</li>
+                    <li>Using fraudulent or manipulated documents for verification purposes.</li>
+                    <li>Applying for jobs without genuine intent to work (spam applications).</li>
+                </ul>
+                <p class="text-gray-700 mb-6">If any of these violations are detected, Happee Antz reserves the right to take immediate action, including account suspension or permanent ban, blacklist from the platform, and reporting fraudulent activity to relevant authorities.</p>
+
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.4 Verification Status & Profile Visibility</h5>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Verified job seekers may receive a "Verified" badge on their profile, increasing credibility and trust with employers.</li>
+                    <li>Employers may choose to prioritize applications from verified candidates, improving job seekers’ chances of landing a job.</li>
+                    <li>Job seekers who fail verification checks may have limited access to job applications or be required to resubmit valid documents.</li>
+                </ul>
+
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.5 Data Security & Privacy in Verification</h5>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Happee Antz values user privacy and ensures that all submitted verification documents are kept confidential and used solely for identity and qualification verification.</li>
+                    <li>We do NOT share personal verification data with third parties unless required by law.</li>
+                    <li>Verification documents are securely stored and accessed only by authorized personnel.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">For more details on how we protect your data, refer to our Privacy Policy.</p>
+
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.6 Appeals & Support</h5>
+                <p class="text-gray-700 mb-6">If a job seeker believes their verification was wrongfully rejected, they may submit an appeal request with supporting documentation to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject “Verification Appeal”. Happee Antz will review appeals on a case-by-case basis, and all verification decisions are final and binding.</p>
+
+                <h5 class="text-md font-semibold text-gray-800 mb-2">15.2.7 Acknowledgment & Agreement</h5>
+                <p class="text-gray-700 mb-4">By using Happee Antz, job seekers acknowledge and agree to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>Provide truthful and verifiable information.</li>
+                    <li>Comply with verification requests when required.</li>
+                    <li>Accept any actions taken if found in violation of the verification policy.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to update or modify this policy as needed to enhance platform security and integrity. For further inquiries regarding job seeker verification, please contact <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a>.</p>
+
+                <h3 class="text-xl md:text-2xl font-semibold text-accent mb-4">16. Background Check Policy for Job Seekers</h3>
+                <p class="text-gray-700 mb-6">By using Happee Antz, job seekers acknowledge and agree to the terms of this Background Check Policy.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.1 Purpose of Background Checks</h4>
+                <p class="text-gray-700 mb-4">The background check process aims to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Verify the accuracy and authenticity of a job seeker’s employment history, qualifications, and references.</li>
+                    <li>Assist employers in making informed hiring decisions based on verified information.</li>
+                    <li>Maintain a trustworthy job marketplace where job seekers and employers can engage with confidence.</li>
+                </ul>
+                <p class="text-gray-700 mb-4">Happee Antz does not conduct background checks on all job seekers by default but may do so under specific circumstances, such as:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6 space-y-2">
+                    <li>Upon request from an employer as part of their hiring process.</li>
+                    <li>If a job seeker applies for positions requiring higher security, licensing, or professional verification.</li>
+                    <li>If inconsistencies are detected in a job seeker’s profile, employment history, or submitted documents.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.2 Information Verified During Background Checks</h4>
+                <p class="text-gray-700 mb-4">As part of the background verification process, Happee Antz may review and confirm the following details:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Employment History</strong> – Past job roles, companies worked for, and duration of employment.</li>
+                    <li><strong>Educational Background</strong> – Degrees, certifications, and institutions attended.</li>
+                    <li><strong>Professional Licenses & Certifications</strong> – Verification of required credentials for specific industries.</li>
+                    <li><strong>Character References</strong> – Contacting references provided by the job seeker for professional validation.</li>
+                </ul>
+                <p class="text-gray-700 mb-6"><strong>Important:</strong> Background checks will only be conducted using the references and previous employer details provided by the job seeker. Happee Antz will not conduct checks beyond the provided information unless required by law.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.3 Privacy & Confidentiality of Background Checks</h4>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li><strong>Confidentiality:</strong> All background check results are strictly confidential and will only be shared with the requesting employer.</li>
+                    <li><strong>No Public Disclosure:</strong> Background check findings will not be made public or shared with third parties outside the hiring process.</li>
+                    <li><strong>Secure Handling of Data:</strong> All verification records are processed in compliance with privacy laws and data protection policies.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Job seekers’ personal information will not be misused, sold, or distributed, and all data will be handled with the utmost security and discretion.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.4 Background Check Appeals & Disputes</h4>
+                <p class="text-gray-700 mb-4">Happee Antz recognizes that errors or discrepancies may occur during the background check process. If a job seeker believes their background check results are inaccurate or unfairly assessed, they may:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Submit an appeal request to <a href="mailto:publicrelations@happeeantz.com" class="text-primary hover:underline">publicrelations@happeeantz.com</a> with the subject “Background Check Appeal”.</li>
+                    <li>Provide supporting documentation or evidence to dispute the findings (e.g., employment records, certificates, or reference letters).</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Happee Antz will review appeals on a case-by-case basis and provide a resolution within a reasonable timeframe. All decisions regarding background check disputes are final and binding.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.5 Consent to Background Checks</h4>
+                <p class="text-gray-700 mb-4">By applying for jobs on Happee Antz that may require a background check, job seekers:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+                    <li>Grant explicit consent to Happee Antz and/or the requesting employer to conduct a background check using the information provided.</li>
+                    <li>Acknowledge that refusal to participate in a required background check may result in ineligibility for certain job opportunities.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">Job seekers will be notified in advance if a background check is required for a specific job application.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.6 Limitation of Liability</h4>
+                <p class="text-gray-700 mb-6">Happee Antz is not liable for any inaccuracies in background check results caused by incorrect or incomplete information provided by the job seeker. Additionally, Happee Antz does not guarantee employment outcomes based on background check results, as hiring decisions remain the sole discretion of the employer.</p>
+
+                <h4 class="text-lg font-semibold text-primary mb-2">16.7 Updates to Background Check Policy</h4>
+                <p class="text-gray-700 mb-6">Happee Antz reserves the right to update or modify this Background Check Policy as needed to enhance platform integrity, comply with legal requirements, or improve user experience. Any changes will be reflected in the updated Terms of Use, and users are encouraged to review this policy periodically.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-6 bg-dark-blue-start text-white">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 gap-8">
+            <div>
+                <ul class="space-y-2">
+                    <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
+                    <li><a href="./privacy-policy.html" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="./terms-of-use.html" class="hover:underline">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-dark-blue-end/50">
+            <div class="flex items-center gap-2 mb-4 sm:mb-0">
+                <img src="./HAPPYANTZ.png" alt="Logo" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold"><span class="text-white">HAPPEE</span><span class="text-secondary">ANTZ</span></span>
+            </div>
+            <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> AntWorks. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenuToggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+        document.addEventListener("click", function (event) {
+            if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                mobileMenu.classList.add("hidden");
+            }
+        });
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    const animation = entry.target.getAttribute("data-animation");
+                    if (animation) {
+                        entry.target.classList.add(animation);
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        document.querySelectorAll(".animate-on-scroll").forEach(element => {
+            observer.observe(element);
+        });
+
+        // Active Navigation Link
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href').split('/').pop();
+            if (href === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+</html>

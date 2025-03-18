@@ -92,6 +92,7 @@
     </style>
 </head>
 <body class="bg-light-bg text-foreground font-sans min-h-screen flex flex-col">
+
 <!-- Header -->
 <header class="sticky top-0 z-50 w-full bg-gradient-to-r from-secondary to-yellow-500 text-dark-blue-start shadow-md">
     <div class="container mx-auto flex h-20 items-center justify-between px-4">
@@ -120,10 +121,10 @@
     <div id="mobileMenu" class="hidden md:hidden bg-yellow-500 border-t border-dark-blue-start/10 px-4 py-6 shadow-lg">
         <nav class="flex flex-col gap-3">
             <a href="../index.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Dashboard</a>
-            <a href="./hivewisepricing.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Browse Jobs</a>
-            <a href="./companies.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Companies</a>
-            <a href="./applications.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Applications</a>
-            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300">Login</a>
+            <a href="./hivewisepricing.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Hive Wise Pricing Plans</a>
+            <a href="./companies.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Ant-credible jobs</a>
+            <a href="./applications.html" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-dark-blue-start rounded-lg hover:bg-dark-blue-start hover:text-secondary transition-all duration-300 nav-link">Ant-mazing talents</a>
+            <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">Login</a>
             <a href="" class="px-4 py-2 text-sm font-medium uppercase tracking-wider bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300">Register</a>
         </nav>
     </div>
@@ -264,52 +265,27 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full py-6 bg-dark-blue-start text-white">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-bold mb-4">About Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:underline">Our Story</a></li>
-                        <li><a href="#" class="hover:underline">Team</a></li>
-                        <li><a href="#" class="hover:underline">Careers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">For Employers</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:underline">Post a Job</a></li>
-                        <li><a href="#" class="hover:underline">Pricing</a></li>
-                        <li><a href="#" class="hover:underline">Resources</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">For Talent</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:underline">Find Jobs</a></li>
-                        <li><a href="#" class="hover:underline">Career Advice</a></li>
-                        <li><a href="#" class="hover:underline">Profile Tips</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Contact</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:underline">Support</a></li>
-                        <li><a href="#" class="hover:underline">FAQ</a></li>
-                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-dark-blue-end/50">
-                <div class="flex items-center gap-2 mb-4 sm:mb-0">
-                    <img src="./HAPPYANTZ.png" alt="Logo" class="h-8 w-8 rounded-full">
-                    <span class="text-xl font-bold"><span class="text-white">HAPPEE</span><span class="text-secondary">ANTZ</span></span>
-                </div>
-                <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> AntWorks. All rights reserved.</p>
+<!-- Footer -->
+<footer class="w-full py-6 bg-dark-blue-start text-white">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 gap-8">
+            <div>
+                <ul class="space-y-2">
+                    <li><a href="./about-us.html" class="hover:underline">About Us</a></li>
+                    <li><a href="./privacy-policy.html" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="./terms-of-use.html" class="hover:underline">Terms of Use</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-dark-blue-end/50">
+            <div class="flex items-center gap-2 mb-4 sm:mb-0">
+                <img src="./HAPPYANTZ.png" alt="Logo" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold"><span class="text-white">HAPPEE</span><span class="text-secondary">ANTZ</span></span>
+            </div>
+            <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> AntWorks. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <!-- Scripts -->
     <script>
